@@ -5,18 +5,13 @@ public class Company {
         Employee[] employees = new Employee[5];
         for (int i = 0; i < employees.length; i++) {
             if (i == 0) {
-                employees[i] = new Manager();
-                employees[i].setSalary(3000 + i * 500);
-                ((Manager) employees[0]).setNumberOfSubordinates(0);
+                employees[i] = new Manager("Manager",3000 ,0);
             }
             else if (i == 1 || i == 4) {
-                employees[i] = new Worker();
-                employees[i].setSalary(3000 + i * 500);
-                ((Worker) employees[i]).setPosition("Developer");
+                employees[i] = new Worker("Worker" +i,3000 + i * 500,"Developer");
             }
             else{
-                employees[i] = new Employee();
-                employees[i].setSalary(3000 + i * 500);
+                employees[i] = new Employee("Employee" + i,3000 + i * 500);
             }
 
         }
